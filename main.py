@@ -94,7 +94,7 @@ def main():
     # creating object of TwitterClient Class
     api = TwitterClient()
     # calling function to get tweets
-    tweets = api.get_tweets(query='Jokowi', count=200)
+    tweets = api.get_tweets(query='Jokowi', count=1000)
 
     # picking positive tweets from tweets
     ptweets = [tweet for tweet in tweets if tweet['sentiment'] == 'positive']
