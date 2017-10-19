@@ -94,7 +94,7 @@ def main():
     # creating object of TwitterClient Class
     api = TwitterClient()
     # calling function to get tweets
-    tweets = api.get_tweets(query='Jokowi', count=500)
+    tweets = api.get_tweets(query='Donald Trump', count=500)
 
     # picking positive tweets from tweets
     ptweets = [tweet for tweet in tweets if tweet['sentiment'] == 'positive']
@@ -113,12 +113,12 @@ def main():
 
     # printing first 5 positive tweets
     print("\n\nPositive tweets:")
-    for tweet in ptweets[:20]:
+    for tweet in ptweets[:5]:
         print(tweet['text'])
 
     # printing first 5 negative tweets
     print("\n\nNegative tweets:")
-    for tweet in ntweets[:20]:
+    for tweet in ntweets[:5]:
         print(tweet['text'])
 
 
